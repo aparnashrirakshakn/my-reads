@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
-// import * as BooksAPI from './BooksAPI'
 import './App.css'
+import BooksSearchBar from './BooksSearchBar'
+import BooksSearchResults from './BooksSearchResults'
 
 export default class BooksSearch extends Component {
     render() {
+      const { books, searchedBooks, onSearchBooks, onClearSearch, onChangeShelf } = this.props
       return (
         <div className="search-books">
-        <div className="search-books-bar">
-          <a className="close-search">Close</a>
-          <div className="search-books-input-wrapper">
-            <input type="text" placeholder="Search by title or author"/>
-  
-          </div>
-        </div>
-        <div className="search-books-results">
-          <ol className="books-grid"></ol>
-        </div>
+          <BooksSearchBar onSearchBooks={onSearchBooks} onClearSearch={onClearSearch}/>
+          <BooksSearchResults books={books} searchedBooks={searchedBooks} onChangeShelf={onChangeShelf}/>
       </div>
       )
     }

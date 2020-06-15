@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-// import * as BooksAPI from './BooksAPI'
 import './App.css'
-import BookCase from './BookCase'
-import BooksSearchOpenButton from './BooksSearchOpenButton'
+import { BookCase } from './BookCase'
+import { BooksSearchOpenButton } from './BooksSearchOpenButton'
 
 export default class BooksList extends Component {
     render() {
